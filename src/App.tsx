@@ -1,13 +1,21 @@
-import React from "react";
+import React from 'react';
 
 const App: React.FC = () => {
   return (
-    <div className="w-60 h-60 bg-red-400">
-      <h1 className="text-3xl font-bold text-black underline">
-        Hello world!
-      </h1>
-    </div>  
+    <div
+      className="w-screen h-screen bg-gray-dark py-6 relative sm:px-28
+       text-white overflow-hidden flex flex-col justify-between align-middle"
+    >
+      {/* header */}
+      <div></div>
+
+      {/* body */}
+      <div></div>
+
+      {/* input */}
+      <div></div>
+    </div>
   );
-}
+};
 
 export default App;
