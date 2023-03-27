@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.left-gradient {
+  width: 50%;
+  height: 238px;
+  top: 0;
+  background: #233329;
+  filter: blur(175px);
+}
+
+.right-gradient {
+  width: 50%;
+  height: 238px;
+  top: -6rem;
+  right: 0;
+  background: #63d471;
+  filter: blur(175px);
+}
