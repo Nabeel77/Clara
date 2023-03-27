@@ -1,6 +1,6 @@
 import { openai } from '../Services/openAIConfig';
 
-interface SendMessageParameterObj {
+interface messageMetadata {
   sender: string;
   message: string;
 }
@@ -10,12 +10,12 @@ interface Respone {
 }
 
 export const fetchChatGptResponse = async (
-  chat: SendMessageParameterObj[]
+  chat: messageMetadata[]
 ): Promise<Respone> => {
   const response = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt: `${chat
-      .map((messages: SendMessageParameterObj) => messages.message)
+      .map((messages: messageMetadata) => messages.message)
       .join('\n')}`,
     max_tokens: 100,
     temperature: 0.2,
