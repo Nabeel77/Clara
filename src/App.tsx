@@ -9,7 +9,7 @@ export interface SendMessageParameterObj {
   message: string;
 }
 
-const App = () => {
+const App = (): JSX.Element => {
   const [chat, setChat] = useState<SendMessageParameterObj[]>([]);
   const mutation = useMutation({
     mutationFn: () => fetchChatGptResponse(chat),

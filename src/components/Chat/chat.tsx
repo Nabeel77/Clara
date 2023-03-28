@@ -5,7 +5,7 @@ interface ChatProps {
   chat: SendMessageParameterObj[];
 }
 
-export const Chat = ({ chat }: ChatProps) => {
+export const Chat = ({ chat }: ChatProps): JSX.Element => {
   const messageStylesUser =
     'border-[#999999] break-all border-2 rounded-xl self-end px-3 py-3 max-w-[80%]';
   const messageStylesChatgpt =
