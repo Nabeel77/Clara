@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TbSend } from 'react-icons/tb';
 import { SendMessageParameterObj } from '../../App';
 interface InputProps {
   sendMessage: ({ sender, message }: SendMessageParameterObj) => void;
 }
 
-export const Input: React.FC<InputProps> = ({ sendMessage }) => {
+export const Input = ({ sendMessage }: InputProps) => {
   const [message, setMessage] = useState('');
   const handleSubmit = (): void => {
     if (!message) return;
