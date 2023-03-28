@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Chat } from './components/Chat';
 import { Input } from './components/Input';
 import { fetchChatGptResponse } from './Api';
@@ -9,7 +9,7 @@ export interface SendMessageParameterObj {
   message: string;
 }
 
-const App: React.FC = () => {
+const App = () => {
   const [chat, setChat] = useState<SendMessageParameterObj[]>([]);
   const mutation = useMutation({
     mutationFn: () => fetchChatGptResponse(chat),
